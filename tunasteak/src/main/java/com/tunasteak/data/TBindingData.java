@@ -1,9 +1,5 @@
 package com.tunasteak.data;
 
-import com.tunasteak.demo.bean.ProfessionBean;
-
-import java.util.List;
-
 import androidx.databinding.ObservableBoolean;
 import androidx.databinding.ObservableField;
 import androidx.databinding.ObservableInt;
@@ -63,15 +59,5 @@ public class TBindingData {
 
     public void setDataSelect(boolean dataSelect) {
         this.dataSelect.set(dataSelect);
-    }
-
-    private ObservableField<List<ProfessionBean>> PrefessionBeanList = new ObservableField();
-
-    public ObservableField<List<ProfessionBean>> getPrefessionBeanList() {
-        return PrefessionBeanList;
-    }
-
-    public void setPrefessionBeanList(List<ProfessionBean> prefessionBeanList) {
-        PrefessionBeanList.set(prefessionBeanList);
     }
 }

@@ -8,8 +8,6 @@
         <variable
             name="adapter"
             type="android.widget.BaseAdapter" />
-
-
     </data>
 
     <RelativeLayout

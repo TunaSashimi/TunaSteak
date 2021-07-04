@@ -1,18 +1,18 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
 }
 
 android {
     compileSdkVersion 30
 
     defaultConfig {
-        applicationId "com.tunasteak"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -31,5 +31,6 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':tunasteak')
+    api 'com.github.TunaSashimi:TunaSushi:1.0.01'
+    api 'androidx.recyclerview:recyclerview:1.0.0'
 }

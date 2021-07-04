@@ -9,7 +9,7 @@
 
         <variable
             name="model"
-            type="com.tunasteak.model.ExpandableListViewModel" />
+            type="com.tunasteak.demo.model.ExpandableListViewModel" />
 
     </data>
 
