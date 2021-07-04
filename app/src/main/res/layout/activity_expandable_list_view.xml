@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.tunasteak.data.TBindingData" />
+
+        <variable
+            name="model"
+            type="com.tunasteak.model.ExpandableListViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->model.change()}"
+            android:text="CHANGE" />
+
+        <ExpandableListView
+            data="@{data.prefessionBeanList}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/button"
+            android:layout_marginBottom="15dp"
+            android:childDivider="#f9fbff"
+            android:divider="#f9fbff"
+            android:groupIndicator="@null" />
+    </RelativeLayout>
+</layout>

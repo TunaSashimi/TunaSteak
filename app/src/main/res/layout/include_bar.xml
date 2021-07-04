@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="onBarListener"
+            type="com.tunasteak.listener.OnBarListener" />
+
+        <variable
+            name="onClickListener"
+            type="com.tunasushi.tuna.TView.OnClickListener" />
+
+        <!--Preparation for TBindingAdapter,TBindingExpand,TBindingModel,TBindingActivity not to report errors-->
+        <variable
+            name="size"
+            type="int" />
+
+        <variable
+            name="position"
+            type="int" />
+
+        <variable
+            name="expanded"
+            type="Boolean" />
+
+        <variable
+            name="bean"
+            type="java.lang.Object" />
+
+        <variable
+            name="data"
+            type="com.tunasteak.data.TBindingData" />
+
+        <variable
+            name="model"
+            type="com.tunasteak.model.TBindingModel" />
+        <!--Preparation for TBindingAdapter,TBindingExpand,TBindingModel,TBindingActivity not to report errors-->
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/title_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/iv_include_left"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:onClick="@{onClickListener::onClick}"
+            android:scaleType="centerInside"
+            android:src="@{onBarListener.drawableLeft}"
+            android:visibility="@{onBarListener.drawableLeft==null?View.GONE:View.VISIBLE}" />
+
+        <TextView
+            android:id="@+id/tv_include_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:onClick="@{onClickListener::onClick}"
+            android:text="@{onBarListener.textLeft}"
+            android:textSize="16sp"
+            android:visibility="@{TextUtils.isEmpty(onBarListener.textLeft)?View.GONE:View.VISIBLE}" />
+
+        <ImageView
+            android:id="@+id/iv_include_right"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="@{onClickListener::onClick}"
+            android:scaleType="centerInside"
+            android:src="@{onBarListener.drawableRight}"
+            android:visibility="@{onBarListener.drawableRight==null?View.GONE:View.VISIBLE}" />
+
+        <TextView
+            android:id="@+id/tv_include_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="18dp"
+            android:onClick="@{onClickListener::onClick}"
+            android:text="@{onBarListener.textRight}"
+            android:textSize="16sp"
+            android:visibility="@{TextUtils.isEmpty(onBarListener.textRight)?View.GONE:View.VISIBLE}" />
+
+        <TextView
+            android:id="@+id/tv_include_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:onClick="@{onClickListener::onClick}"
+            android:text="@{onBarListener.textCenter}"
+            android:textSize="16sp"
+            android:visibility="@{TextUtils.isEmpty(onBarListener.textCenter)?View.GONE:View.VISIBLE}" />
+    </RelativeLayout>
+</layout>
+
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClickListener"
+            type="com.tunasushi.tuna.TView.OnClickListener" />
+
+        <variable
+            name="size"
+            type="int" />
+
+        <variable
+            name="bean"
+            type="com.tunasteak.bean.PersonBean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:onClick="@{onClickListener::onClick}"
+            android:text="@{bean.name}"
+            android:textSize="28dp"
+            tools:text="张三" />
+
+        <com.tunasushi.tuna.TView
+            android:id="@+id/tViewAge"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@id/tvName"
+            android:text='@{bean.age+"岁"}'
+            app:backgroundNormal="#ffff00"
+            app:backgroundSelect="#0000ff"
+            app:onClickListener="@{onClickListener}"
+            app:select="@{bean.marry}"
+            app:textSize="28dp"
+            tools:text="16岁" />
+    </RelativeLayout>
+</layout>

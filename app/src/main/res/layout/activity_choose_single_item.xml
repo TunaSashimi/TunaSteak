@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClickListener"
+            type="com.tunasushi.tuna.TView.OnClickListener" />
+
+        <variable
+            name="position"
+            type="int" />
+
+        <variable
+            name="data"
+            type="com.tunasteak.data.TBindingData" />
+
+        <variable
+            name="bean"
+            type="com.tunasteak.bean.ChooseBean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@{bean.name}"
+            android:textSize="32dp"
+            tools:text="7天" />
+
+        <com.tunasushi.tuna.TView
+            android:id="@+id/tViewSelect"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:onClick="@{onClickListener::onClick}"
+            app:select="@{position==data.chooseIndex}"
+            app:srcNormal="@drawable/bitmap_tview_check1"
+            app:srcSelect="@drawable/bitmap_tview_check2" />
+    </RelativeLayout>
+</layout>

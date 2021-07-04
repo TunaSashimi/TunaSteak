@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="onBarListener"
+            type="com.tunasteak.listener.OnBarListener" />
+
+        <variable
+            name="onClickListener"
+            type="com.tunasushi.tuna.TView.OnClickListener" />
+
+        <variable
+            name="model"
+            type="com.tunasteak.model.TLoadBindingModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/title_layout"
+            layout="@layout/include_bar"
+            app:onBarListener="@{onBarListener}"
+            app:onClickListener="@{onClickListener}" />
+
+        <Button
+            android:id="@+id/btnShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_layout"
+            android:onClick="@{onClickListener::onClick}"
+            android:text="SHOW LOADING" />
+
+        <Button
+            android:id="@+id/btnDismiss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnShow"
+            android:onClick="@{onClickListener::onClick}"
+            android:text="DISSMISS LOADING" />
+
+        <Button
+            android:id="@+id/btnFloat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnDismiss"
+            android:onClick="@{onClickListener::onClick}"
+            android:text="Float LOADING" />
+
+        <com.tunasushi.tuna.TView
+            android:id="@+id/tView"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/btnFloat"
+            android:layout_marginTop="16dp"
+            app:backgroundNormal="#ffffff"
+            app:backgroundPress="#000000"
+            app:onClickListener="@{onClickListener}"
+            app:text="TView"
+            app:textColorNormal="#000000"
+            app:textColorPress="#ffffff" />
+    </RelativeLayout>
+</layout>

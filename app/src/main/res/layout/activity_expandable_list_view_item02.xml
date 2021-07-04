@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="bean"
+            type="com.tunasteak.bean.HeroBean" />
+
+        <variable
+            name="onClickListener"
+            type="com.tunasushi.tuna.TView.OnClickListener" />
+    </data>
+
+    <TextView
+        android:id="@+id/expand_child"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="@{onClickListener::onClick}"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@{bean.name}"
+        android:textSize="16dp" />
+</layout>
