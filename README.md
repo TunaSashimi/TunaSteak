@@ -17,7 +17,7 @@ allprojects {
 Step 2. Add the dependency
 
   	dependencies {
-	        implementation 'com.github.TunaSashimi:TunaSteak:1.0.02'
+	        implementation 'com.github.TunaSashimi:TunaSteak:1.0.01'
 	}
 	
 Attention
