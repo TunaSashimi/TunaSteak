@@ -5,7 +5,7 @@
 
         <variable
             name="bean"
-            type="com.tunasteak.demo.bean.HeroBean" />
+            type="com.tunasteak.bean.HeroBean" />
 
         <variable
             name="onClickListener"

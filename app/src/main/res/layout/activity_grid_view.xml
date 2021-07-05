@@ -5,7 +5,7 @@
 
         <variable
             name="model"
-            type="com.tunasteak.demo.model.GridViewModel" />
+            type="com.tunasteak.model.GridViewModel" />
 
         <variable
             name="adapter"

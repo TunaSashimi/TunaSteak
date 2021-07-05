@@ -1,19 +1,18 @@
-package com.tunasteak.demo.model;
+package com.tunasteak.model;
 
 import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
+
 import com.tunasteak.demo.R;
-import com.tunasteak.demo.activity.ChooseMultipleBindingActivity;
+import com.tunasteak.activity.ChooseSingleBindingActivity;
 import com.tunasteak.adapter.TBindingAdapter;
-import com.tunasteak.demo.bean.ChooseBean;
+import com.tunasteak.bean.ChooseBean;
 import com.tunasteak.data.TBindingData;
-import com.tunasteak.demo.databinding.ActivityChooseMultipleBinding;
-import com.tunasteak.demo.databinding.ActivityChooseMultipleItemBinding;
+import com.tunasteak.demo.databinding.ActivityChooseSingleBinding;
+import com.tunasteak.demo.databinding.ActivityChooseSingleItemBinding;
 import com.tunasteak.listener.OnItemClickListener;
-import com.tunasteak.model.TBindingModel;
-import com.tunasushi.tuna.TView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,29 +23,29 @@ import java.util.List;
  * @Copyright 2020 TunaSashimi. All rights reserved.
  * @Description
  */
-public class ChooseMultipleModel extends TBindingModel<ActivityChooseMultipleBinding> implements OnItemClickListener<ActivityChooseMultipleItemBinding> {
-    private ChooseMultipleBindingActivity activity;
+public class ChooseSingleModel extends TBindingModel<ActivityChooseSingleBinding> implements OnItemClickListener<ActivityChooseSingleItemBinding> {
+    private ChooseSingleBindingActivity activity;
     public List<ChooseBean> chooseBeanList = new ArrayList();
 
-    public ChooseMultipleModel(ActivityChooseMultipleBinding binding, Intent intent) {
+    public ChooseSingleModel(ActivityChooseSingleBinding binding, Intent intent) {
         super(binding);
         this.binding = binding;
-        this.activity = (ChooseMultipleBindingActivity) binding.getRoot().getContext();
+        this.activity = (ChooseSingleBindingActivity) binding.getRoot().getContext();
         initData(intent);
     }
 
     @Override
-    public void onItemClick(View v, int position, ActivityChooseMultipleItemBinding binding) {
+    public void onItemClick(View v, int position, ActivityChooseSingleItemBinding binding) {
+
         //
         Toast.makeText(v.getContext(), "position==>" + position, Toast.LENGTH_SHORT).show();
 
         switch (v.getId()) {
             case R.id.tViewSelect:
-                TView t = (TView) v;
-                if (t.isSelect()) {
-                    //do something
-                } else {
-                    //do something
+                TBindingData bindingData = TBindingData.getInstance();
+                int index = bindingData.getChooseIndex().get();
+                if (position != index) {
+                    bindingData.setChooseIndex(position);
                 }
                 break;
             default:
@@ -68,18 +67,6 @@ public class ChooseMultipleModel extends TBindingModel<ActivityChooseMultipleBin
         chooseBeanList.add(new ChooseBean("CHOOSE 10"));
 
         //
-        binding.setAdapter(new TBindingAdapter(chooseBeanList, R.layout.activity_choose_multiple_item, this));
-    }
-
-    public void chooseAll() {
-        TBindingData tBindingData = TBindingData.getInstance();
-        tBindingData.setChooseIndex(-1);
-        if (tBindingData.getChooseAll().get()) {
-            tBindingData.setChooseAll(false);
-            //do something
-        } else {
-            tBindingData.setChooseAll(true);
-            //do something
-        }
+        binding.setAdapter(new TBindingAdapter(chooseBeanList, R.layout.activity_choose_single_item, this));
     }
 }

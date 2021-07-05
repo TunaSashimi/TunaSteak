@@ -7,22 +7,22 @@
         android:icon="@drawable/tunasashimi"
         android:label="@string/app_name"
         android:supportsRtl="true">
-        <activity android:name=".activity.EntryBindingActivity">
+        <activity android:name="com.tunasteak.activity.EntryBindingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.DataShowBindingActivity" />
-        <activity android:name=".activity.TwoWayBindingActivity" />
+        <activity android:name="com.tunasteak.activity.DataShowBindingActivity" />
+        <activity android:name="com.tunasteak.activity.TwoWayBindingActivity" />
 
-        <activity android:name=".activity.ChooseSingleBindingActivity" />
-        <activity android:name=".activity.ChooseMultipleBindingActivity" />
-        <activity android:name=".activity.ExpandableListViewBindingActivity" />
-        <activity android:name=".activity.GridViewBindingActivity" />
-        <activity android:name=".activity.RecyclerViewBindingActivity" />
+        <activity android:name="com.tunasteak.activity.ChooseSingleBindingActivity" />
+        <activity android:name="com.tunasteak.activity.ChooseMultipleBindingActivity" />
+        <activity android:name="com.tunasteak.activity.ExpandableListViewBindingActivity" />
+        <activity android:name="com.tunasteak.activity.GridViewBindingActivity" />
+        <activity android:name="com.tunasteak.activity.RecyclerViewBindingActivity" />
 
-        <activity android:name=".activity.TLoadBindingActivity" />
+        <activity android:name="com.tunasteak.activity.TLoadBindingActivity" />
     </application>
 </manifest>

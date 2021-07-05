@@ -1,4 +1,4 @@
-package com.tunasteak.demo.activity;
+package com.tunasteak.activity;
 
 import android.content.Intent;
 import android.view.View;
@@ -6,7 +6,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.tunasteak.activity.TBindingActivity;
 import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityEntryBinding;
 import com.tunasteak.model.TBindingModel;

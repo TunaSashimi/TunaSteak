@@ -1,6 +1,6 @@
 package com.tunasteak.data;
 
-import com.tunasteak.demo.bean.ProfessionBean;
+import com.tunasteak.bean.ProfessionBean;
 
 import java.util.List;
 

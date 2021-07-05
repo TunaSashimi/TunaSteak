@@ -1,4 +1,4 @@
-package com.tunasteak.demo.itemDecoration;
+package com.tunasteak.itemDecoration;
 
 /**
  * @author Tunasashimi

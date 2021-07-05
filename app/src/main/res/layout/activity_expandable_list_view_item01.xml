@@ -5,7 +5,7 @@
 
         <variable
             name="bean"
-            type="com.tunasteak.demo.bean.ProfessionBean" />
+            type="com.tunasteak.bean.ProfessionBean" />
 
         <variable
             name="expanded"

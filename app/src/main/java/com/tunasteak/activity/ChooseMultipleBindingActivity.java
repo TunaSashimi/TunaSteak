@@ -1,11 +1,10 @@
-package com.tunasteak.demo.activity;
+package com.tunasteak.activity;
 
 import android.view.View;
 
-import com.tunasteak.activity.TBindingActivity;
 import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityChooseMultipleBinding;
-import com.tunasteak.demo.model.ChooseMultipleModel;
+import com.tunasteak.model.ChooseMultipleModel;
 import com.tunasteak.model.TBindingModel;
 
 public class ChooseMultipleBindingActivity extends TBindingActivity<ActivityChooseMultipleBinding> {

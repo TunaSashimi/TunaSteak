@@ -6,7 +6,7 @@
 
         <variable
             name="select"
-            type="com.tunasteak.demo.bean.SelectBean" />
+            type="com.tunasteak.bean.SelectBean" />
     </data>
 
     <RelativeLayout

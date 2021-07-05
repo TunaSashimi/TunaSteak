@@ -1,9 +1,8 @@
-package com.tunasteak.demo.model;
+package com.tunasteak.model;
 
 import android.content.Intent;
-import com.tunasteak.demo.activity.TLoadBindingActivity;
+import com.tunasteak.activity.TLoadBindingActivity;
 import com.tunasteak.demo.databinding.ActivityTLoadBinding;
-import com.tunasteak.model.TBindingModel;
 
 /**
  * @author Tunasashimi

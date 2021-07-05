@@ -1,4 +1,4 @@
-package com.tunasteak.demo.activity;
+package com.tunasteak.activity;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -10,11 +10,10 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.tunasteak.activity.TBindingActivity;
 import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityTLoadBinding;
 import com.tunasteak.model.TBindingModel;
-import com.tunasteak.demo.model.TLoadBindingModel;
+import com.tunasteak.model.TLoadBindingModel;
 import com.tunasushi.tuna.TLoad;
 
 /**

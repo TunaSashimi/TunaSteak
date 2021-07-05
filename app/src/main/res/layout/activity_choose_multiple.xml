@@ -9,7 +9,7 @@
 
         <variable
             name="model"
-            type="com.tunasteak.demo.model.ChooseMultipleModel" />
+            type="com.tunasteak.model.ChooseMultipleModel" />
 
     </data>
 

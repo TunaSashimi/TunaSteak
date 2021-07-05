@@ -1,4 +1,4 @@
-package com.tunasteak.demo.bean;
+package com.tunasteak.bean;
 
 import java.util.ArrayList;
 import java.util.List;

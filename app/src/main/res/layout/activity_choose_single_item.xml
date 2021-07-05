@@ -19,7 +19,7 @@
 
         <variable
             name="bean"
-            type="com.tunasteak.demo.bean.ChooseBean" />
+            type="com.tunasteak.bean.ChooseBean" />
     </data>
 
     <RelativeLayout
