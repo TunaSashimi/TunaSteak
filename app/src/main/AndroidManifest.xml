@@ -10,7 +10,6 @@
         <activity android:name="com.tunasteak.activity.EntryBindingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
