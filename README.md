@@ -27,7 +27,7 @@ If there are modules with the same package name, otherwise the generated DataBin
 
 	ViewDataBinding binding = DataBindingUtil.setContentView(this, layoutId) 
 	
-always returns null
+always returns null.
 
 If the attributes defined in the TunaSteak library and the attributes defined in other libraries have the same name and different types, compilation errors will occur.The solution is to define an attribute with the same name in the attr of the main project, but the type contains both.
 
