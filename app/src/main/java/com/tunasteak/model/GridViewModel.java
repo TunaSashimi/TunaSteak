@@ -3,15 +3,13 @@ package com.tunasteak.model;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
-
-import com.tunasteak.demo.R;
 import com.tunasteak.activity.GridViewBindingActivity;
 import com.tunasteak.adapter.TBindingAdapter;
 import com.tunasteak.bean.PersonBean;
+import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityGridViewBinding;
 import com.tunasteak.demo.databinding.ActivityGridViewItemBinding;
 import com.tunasteak.listener.OnItemClickListener;
-
 import java.util.ArrayList;
 import java.util.List;
 

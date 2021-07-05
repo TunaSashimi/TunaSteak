@@ -3,17 +3,15 @@ package com.tunasteak.model;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
-
-import com.tunasteak.demo.R;
 import com.tunasteak.activity.ChooseMultipleBindingActivity;
 import com.tunasteak.adapter.TBindingAdapter;
 import com.tunasteak.bean.ChooseBean;
 import com.tunasteak.data.TBindingData;
+import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityChooseMultipleBinding;
 import com.tunasteak.demo.databinding.ActivityChooseMultipleItemBinding;
 import com.tunasteak.listener.OnItemClickListener;
 import com.tunasushi.tuna.TView;
-
 import java.util.ArrayList;
 import java.util.List;
 

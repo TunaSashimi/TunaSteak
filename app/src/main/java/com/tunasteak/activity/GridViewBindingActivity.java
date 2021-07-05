@@ -1,7 +1,6 @@
 package com.tunasteak.activity;
 
 import android.view.View;
-
 import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityGridViewBinding;
 import com.tunasteak.model.GridViewModel;

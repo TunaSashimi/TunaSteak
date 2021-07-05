@@ -2,18 +2,15 @@ package com.tunasteak.model;
 
 import android.content.Intent;
 import android.view.View;
-
-import com.tunasteak.demo.R;
 import com.tunasteak.activity.RecyclerViewBindingActivity;
 import com.tunasteak.adapter.TBindingRecycler;
+import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityRecyclerViewBinding;
 import com.tunasteak.demo.databinding.ActivityRecyclerViewItemBinding;
 import com.tunasteak.itemDecoration.RecyclerItemDecoration;
 import com.tunasteak.listener.OnItemClickListener;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import androidx.recyclerview.widget.DefaultItemAnimator;
 
 /**

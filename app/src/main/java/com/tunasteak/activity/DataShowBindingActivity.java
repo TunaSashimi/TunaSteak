@@ -1,9 +1,8 @@
 package com.tunasteak.activity;
 
 import android.view.View;
-
-import com.tunasteak.demo.R;
 import com.tunasteak.data.TBindingData;
+import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityDataShowBinding;
 import com.tunasteak.model.TBindingModel;
 

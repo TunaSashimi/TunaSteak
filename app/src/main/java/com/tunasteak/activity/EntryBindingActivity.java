@@ -5,11 +5,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityEntryBinding;
 import com.tunasteak.model.TBindingModel;
-
 import java.util.ArrayList;
 import java.util.List;
 

@@ -9,7 +9,6 @@ import android.provider.Settings;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
-
 import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityTLoadBinding;
 import com.tunasteak.model.TBindingModel;

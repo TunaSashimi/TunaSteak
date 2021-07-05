@@ -1,7 +1,6 @@
 package com.tunasteak.activity;
 
 import android.view.View;
-
 import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityChooseSingleBinding;
 import com.tunasteak.model.ChooseSingleModel;

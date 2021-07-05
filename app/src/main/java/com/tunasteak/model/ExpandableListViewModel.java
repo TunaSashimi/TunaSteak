@@ -4,23 +4,20 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
-
-import com.tunasteak.demo.R;
 import com.tunasteak.activity.ExpandableListViewBindingActivity;
 import com.tunasteak.adapter.TBindingExpandableListAdapter;
 import com.tunasteak.bean.HeroBean;
 import com.tunasteak.bean.ProfessionBean;
 import com.tunasteak.data.TBindingData;
+import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityExpandableListViewBinding;
 import com.tunasteak.demo.databinding.ActivityExpandableListViewItem01Binding;
 import com.tunasteak.listener.OnChildCountListener;
 import com.tunasteak.listener.OnChildListener;
 import com.tunasteak.listener.OnItemChildClickListener;
 import com.tunasteak.listener.OnItemClickListener;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import androidx.databinding.BindingAdapter;
 import androidx.databinding.ViewDataBinding;
 
