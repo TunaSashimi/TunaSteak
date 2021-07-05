@@ -31,6 +31,6 @@ android {
 }
 
 dependencies {
-    api 'com.github.TunaSashimi:TunaSushi:1.0.01'
+    api 'com.github.TunaSashimi:TunaSushi:1.0.02'
     api 'androidx.recyclerview:recyclerview:1.0.0'
 }

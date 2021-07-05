@@ -13,7 +13,7 @@
 
         <variable
             name="onClickListener"
-            type="com.tunasushi.tuna.TView.OnClickListener" />
+            type="com.tunasushi.view.TView.OnClickListener" />
 
         <!--Preparation for TBindingAdapter,TBindingExpand,TBindingModel,TBindingActivity not to report errors-->
         <variable

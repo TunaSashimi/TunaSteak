@@ -11,8 +11,7 @@ import com.tunasteak.data.TBindingData;
 import com.tunasteak.listener.OnBarListener;
 import com.tunasteak.listener.OnInitListener;
 import com.tunasteak.model.TBindingModel;
-import com.tunasushi.tuna.TView;
-
+import com.tunasushi.view.TView;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;

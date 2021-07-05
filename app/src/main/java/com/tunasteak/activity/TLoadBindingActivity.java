@@ -13,7 +13,7 @@ import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityTLoadBinding;
 import com.tunasteak.model.TBindingModel;
 import com.tunasteak.model.TLoadBindingModel;
-import com.tunasushi.tuna.TLoad;
+import com.tunasushi.view.TLoad;
 
 /**
  * @author TunaSashimi

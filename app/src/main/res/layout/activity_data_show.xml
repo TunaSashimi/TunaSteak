@@ -34,7 +34,7 @@
             android:onClick="onClick"
             android:text="DATA SHOW" />
 
-        <com.tunasushi.tuna.TView
+        <com.tunasushi.view.TView
             android:id="@+id/tViewText"
             android:layout_width="match_parent"
             android:layout_height="36dp"
@@ -43,7 +43,7 @@
             app:backgroundNormal="#ffff00"
             app:text="@{data.dataShow}" />
 
-        <com.tunasushi.tuna.TView
+        <com.tunasushi.view.TView
             android:id="@+id/tViewContent"
             android:layout_width="match_parent"
             android:layout_height="36dp"
@@ -53,7 +53,7 @@
             app:content="@{data.dataShow}"
             app:textColorNormal="#333333" />
 
-        <com.tunasushi.tuna.TView
+        <com.tunasushi.view.TView
             android:id="@+id/tViewSelect"
             android:layout_width="match_parent"
             android:layout_height="36dp"
@@ -65,7 +65,7 @@
             app:select="@{data.dataSelect}"
             app:text='@{data.dataSelect?"DATA SELECT":""}' />
 
-        <com.tunasushi.tuna.TView
+        <com.tunasushi.view.TView
             android:id="@+id/tViewSrcLeftPadding"
             android:layout_width="80dp"
             android:layout_height="48dp"

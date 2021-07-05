@@ -9,7 +9,7 @@
 
         <variable
             name="onClickListener"
-            type="com.tunasushi.tuna.TView.OnClickListener" />
+            type="com.tunasushi.view.TView.OnClickListener" />
     </data>
 
     <TextView

@@ -4,14 +4,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-
 import com.tunasteak.BR;
 import com.tunasteak.data.TBindingData;
 import com.tunasteak.listener.OnItemClickListener;
-import com.tunasushi.tuna.TView;
-
+import com.tunasushi.view.TView;
 import java.util.List;
-
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 

@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.tunasushi.tuna.TView
+        <com.tunasushi.view.TView
             android:id="@+id/tView01"
             android:layout_width="120dp"
             android:layout_height="120dp"
@@ -21,7 +21,7 @@
             app:backgroundSelect="#0000ff"
             app:select="@{select.select}" />
 
-        <com.tunasushi.tuna.TView
+        <com.tunasushi.view.TView
             android:id="@+id/tView02"
             android:layout_width="120dp"
             android:layout_height="120dp"

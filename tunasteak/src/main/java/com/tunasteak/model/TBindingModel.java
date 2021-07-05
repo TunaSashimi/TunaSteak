@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.view.Gravity;
 import android.widget.FrameLayout;
-import com.tunasushi.tuna.TLoad;
+import com.tunasushi.view.TLoad;
 import androidx.databinding.ViewDataBinding;
 
 /**

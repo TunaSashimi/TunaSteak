@@ -11,7 +11,7 @@ import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityChooseMultipleBinding;
 import com.tunasteak.demo.databinding.ActivityChooseMultipleItemBinding;
 import com.tunasteak.listener.OnItemClickListener;
-import com.tunasushi.tuna.TView;
+import com.tunasushi.view.TView;
 import java.util.ArrayList;
 import java.util.List;
 

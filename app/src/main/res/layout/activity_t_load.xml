@@ -10,7 +10,7 @@
 
         <variable
             name="onClickListener"
-            type="com.tunasushi.tuna.TView.OnClickListener" />
+            type="com.tunasushi.view.TView.OnClickListener" />
 
         <variable
             name="model"
@@ -51,7 +51,7 @@
             android:onClick="@{onClickListener::onClick}"
             android:text="Float LOADING" />
 
-        <com.tunasushi.tuna.TView
+        <com.tunasushi.view.TView
             android:id="@+id/tView"
             android:layout_width="match_parent"
             android:layout_height="48dp"
