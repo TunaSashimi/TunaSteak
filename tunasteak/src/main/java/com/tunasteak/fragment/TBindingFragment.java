@@ -8,12 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tunasteak.BR;
-import com.tunasteak.data.TBindingChoose;
 import com.tunasteak.listener.OnBarListener;
 import com.tunasteak.listener.OnInitListener;
 import com.tunasteak.listener.OnLoadListener;
 import com.tunasteak.model.TBindingModel;
 import com.tunasushi.view.TView;
+
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -32,6 +32,8 @@ public abstract class TBindingFragment<B extends ViewDataBinding> extends Fragme
 
     protected abstract TBindingModel getModel();
 
+    protected abstract Object getData();
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
@@ -40,12 +42,13 @@ public abstract class TBindingFragment<B extends ViewDataBinding> extends Fragme
             try {
                 binding = DataBindingUtil.inflate(inflater, layoutId, container, false);
                 contentView = binding.getRoot();
-                TBindingModel tBindingModel = getModel();
                 //
+                TBindingModel tBindingModel = getModel();
                 binding.setVariable(BR.model, tBindingModel);
+                Object data = getData();
+                binding.setVariable(BR.data, data);
+                //
                 binding.setVariable(BR.onBarListener, this);
-                binding.setVariable(BR.model, tBindingModel);
-//                binding.setVariable(BR.choose, TBindingChoose.getInstance());
                 binding.setVariable(BR.onClickListener, this);
                 //
                 binding.executePendingBindings();

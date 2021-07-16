@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import com.tunasteak.BR;
-import com.tunasteak.data.TBindingChoose;
 import com.tunasteak.listener.OnBarListener;
 import com.tunasteak.listener.OnInitListener;
 import com.tunasteak.model.TBindingModel;
@@ -55,9 +54,9 @@ public abstract class TBindingActivity<B extends ViewDataBinding> extends Activi
                 //
                 TBindingModel tBindingModel = getModel();
                 binding.setVariable(BR.model, tBindingModel);
-                //
                 Object data = getData();
                 binding.setVariable(BR.data, data);
+                //
                 binding.setVariable(BR.onBarListener, this);
                 binding.setVariable(BR.onClickListener, this);
                 //
