@@ -6,7 +6,6 @@ import java.util.List;
 
 import androidx.databinding.ObservableBoolean;
 import androidx.databinding.ObservableField;
-import androidx.databinding.ObservableInt;
 
 /**
  * @author Tunasashimi
@@ -14,13 +13,13 @@ import androidx.databinding.ObservableInt;
  * @Copyright 2019 TunaSashimi. All rights reserved.
  * @Description
  */
-public class BindingData {
-    private BindingData() {
+public class Data {
+    private Data() {
     }
 
-    private static BindingData instance = new BindingData();
+    private static Data instance = new Data();
 
-    public static BindingData getInstance() {
+    public static Data getInstance() {
         return instance;
     }
 

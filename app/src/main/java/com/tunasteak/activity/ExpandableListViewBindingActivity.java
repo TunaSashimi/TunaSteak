@@ -2,7 +2,7 @@ package com.tunasteak.activity;
 
 import android.view.View;
 
-import com.tunasteak.data.BindingData;
+import com.tunasteak.data.Data;
 import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityExpandableListViewBinding;
 import com.tunasteak.model.ExpandableListViewModel;
@@ -21,7 +21,7 @@ public class ExpandableListViewBindingActivity extends TBindingActivity<Activity
 
     @Override
     protected Object getData() {
-        return BindingData.getInstance();
+        return Data.getInstance();
     }
 
     @Override

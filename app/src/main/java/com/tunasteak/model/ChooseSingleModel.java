@@ -6,7 +6,6 @@ import android.widget.Toast;
 import com.tunasteak.activity.ChooseSingleBindingActivity;
 import com.tunasteak.adapter.TBindingAdapter;
 import com.tunasteak.bean.ChooseBean;
-import com.tunasteak.data.BindingData;
 import com.tunasteak.data.TBindingChoose;
 import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityChooseSingleBinding;

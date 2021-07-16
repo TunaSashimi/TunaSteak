@@ -9,7 +9,7 @@ import com.tunasteak.activity.ExpandableListViewBindingActivity;
 import com.tunasteak.adapter.TBindingExpandableListAdapter;
 import com.tunasteak.bean.HeroBean;
 import com.tunasteak.bean.ProfessionBean;
-import com.tunasteak.data.BindingData;
+import com.tunasteak.data.Data;
 import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityExpandableListViewBinding;
 import com.tunasteak.demo.databinding.ActivityExpandableListViewItem01Binding;
@@ -80,7 +80,7 @@ public class ExpandableListViewModel extends TBindingModel<ActivityExpandableLis
         }
 
         //
-        BindingData.getInstance().setPrefessionBeanList(professionBeanList);
+        Data.getInstance().setPrefessionBeanList(professionBeanList);
     }
 
     //

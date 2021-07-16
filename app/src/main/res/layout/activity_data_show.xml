@@ -6,7 +6,7 @@
 
         <variable
             name="data"
-            type="com.tunasteak.data.BindingData" />
+            type="com.tunasteak.data.Data" />
     </data>
 
     <RelativeLayout

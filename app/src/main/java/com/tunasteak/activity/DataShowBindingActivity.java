@@ -2,7 +2,7 @@ package com.tunasteak.activity;
 
 import android.view.View;
 
-import com.tunasteak.data.BindingData;
+import com.tunasteak.data.Data;
 import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityDataShowBinding;
 import com.tunasteak.model.TBindingModel;
@@ -26,7 +26,7 @@ public class DataShowBindingActivity extends TBindingActivity<ActivityDataShowBi
 
     @Override
     protected Object getData() {
-        return BindingData.getInstance();
+        return Data.getInstance();
     }
 
     @Override
@@ -38,7 +38,7 @@ public class DataShowBindingActivity extends TBindingActivity<ActivityDataShowBi
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button:
-                BindingData bindingData = BindingData.getInstance();
+                Data bindingData = Data.getInstance();
                 bindingData.setDataShow("DATA SHOW");
                 if (bindingData.getDataSelect().get()) {
                     bindingData.setDataSelect(false);
