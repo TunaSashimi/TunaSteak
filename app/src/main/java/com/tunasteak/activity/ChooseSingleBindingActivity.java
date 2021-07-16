@@ -18,6 +18,11 @@ public class ChooseSingleBindingActivity extends TBindingActivity<ActivityChoose
     }
 
     @Override
+    protected Object getData() {
+        return null;
+    }
+
+    @Override
     public void onInit() {
 
     }

@@ -4,7 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.tunasteak.BR;
-import com.tunasteak.data.TBindingData;
+import com.tunasteak.data.TBindingChoose;
 import com.tunasteak.listener.OnItemClickListener;
 import com.tunasushi.view.TView;
 import java.util.ArrayList;
@@ -80,7 +80,7 @@ public class TBindingRecycler extends RecyclerView.Adapter {
         binding.setVariable(itemId, list.get(position));
         binding.setVariable(BR.size, list.size());
         binding.setVariable(BR.position, position);
-        binding.setVariable(BR.data, TBindingData.getInstance());
+        binding.setVariable(BR.choose, TBindingChoose.getInstance());
         binding.setVariable(BR.onClickListener, onClickListener);
         //
         binding.executePendingBindings();

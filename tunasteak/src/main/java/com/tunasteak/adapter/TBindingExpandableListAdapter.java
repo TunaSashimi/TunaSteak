@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 
 import com.tunasteak.BR;
-import com.tunasteak.data.TBindingData;
+import com.tunasteak.data.TBindingChoose;
 import com.tunasteak.listener.OnChildCountListener;
 import com.tunasteak.listener.OnChildListener;
 import com.tunasteak.listener.OnItemChildClickListener;
@@ -125,7 +125,7 @@ public class TBindingExpandableListAdapter extends BaseExpandableListAdapter {
         binding.setVariable(BR.position, groupPosition);
         binding.setVariable(BR.expanded, isExpanded);
         //
-        binding.setVariable(BR.data, TBindingData.getInstance());
+        binding.setVariable(BR.choose, TBindingChoose.getInstance());
         binding.setVariable(BR.onClickListener, onClickListener);
         //
         binding.executePendingBindings();
@@ -148,7 +148,7 @@ public class TBindingExpandableListAdapter extends BaseExpandableListAdapter {
         };
         //
         binding.setVariable(itemId02, childListener.getChild(groupPosition, childPosition));
-        binding.setVariable(BR.data, TBindingData.getInstance());
+        binding.setVariable(BR.choose, TBindingChoose.getInstance());
         binding.setVariable(BR.onClickListener, onClickListener);
         //
         binding.executePendingBindings();

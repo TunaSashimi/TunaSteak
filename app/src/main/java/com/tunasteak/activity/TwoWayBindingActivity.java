@@ -24,6 +24,11 @@ public class TwoWayBindingActivity extends TBindingActivity<ActivityTwoWayBindin
     }
 
     @Override
+    protected Object getData() {
+        return null;
+    }
+
+    @Override
     public void onInit() {
         SelectBean selectBean = new SelectBean();
         binding.setSelect(selectBean);

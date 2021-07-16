@@ -6,7 +6,8 @@ import android.widget.Toast;
 import com.tunasteak.activity.ChooseSingleBindingActivity;
 import com.tunasteak.adapter.TBindingAdapter;
 import com.tunasteak.bean.ChooseBean;
-import com.tunasteak.data.TBindingData;
+import com.tunasteak.data.BindingData;
+import com.tunasteak.data.TBindingChoose;
 import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityChooseSingleBinding;
 import com.tunasteak.demo.databinding.ActivityChooseSingleItemBinding;
@@ -39,10 +40,10 @@ public class ChooseSingleModel extends TBindingModel<ActivityChooseSingleBinding
 
         switch (v.getId()) {
             case R.id.tViewSelect:
-                TBindingData bindingData = TBindingData.getInstance();
-                int index = bindingData.getChooseIndex().get();
+                TBindingChoose tBindingChoose = TBindingChoose.getInstance();
+                int index = tBindingChoose.getChooseIndex().get();
                 if (position != index) {
-                    bindingData.setChooseIndex(position);
+                    tBindingChoose.setChooseIndex(position);
                 }
                 break;
             default:

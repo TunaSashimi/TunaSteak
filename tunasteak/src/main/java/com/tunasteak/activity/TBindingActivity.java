@@ -7,11 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import com.tunasteak.BR;
-import com.tunasteak.data.TBindingData;
+import com.tunasteak.data.TBindingChoose;
 import com.tunasteak.listener.OnBarListener;
 import com.tunasteak.listener.OnInitListener;
 import com.tunasteak.model.TBindingModel;
 import com.tunasushi.view.TView;
+
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -29,6 +30,8 @@ public abstract class TBindingActivity<B extends ViewDataBinding> extends Activi
     protected abstract int getLayoutId();
 
     protected abstract TBindingModel getModel();
+
+    protected abstract Object getData();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,10 +52,13 @@ public abstract class TBindingActivity<B extends ViewDataBinding> extends Activi
             binding = DataBindingUtil.setContentView(this, layoutId);
             if (binding != null) {
                 contentView = binding.getRoot();
+                //
                 TBindingModel tBindingModel = getModel();
                 binding.setVariable(BR.model, tBindingModel);
+                //
+                Object data = getData();
+                binding.setVariable(BR.data, data);
                 binding.setVariable(BR.onBarListener, this);
-                binding.setVariable(BR.data, TBindingData.getInstance());
                 binding.setVariable(BR.onClickListener, this);
                 //
                 binding.executePendingBindings();

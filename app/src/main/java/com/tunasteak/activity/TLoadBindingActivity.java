@@ -33,6 +33,11 @@ public class TLoadBindingActivity extends TBindingActivity<ActivityTLoadBinding>
     }
 
     @Override
+    protected Object getData() {
+        return null;
+    }
+
+    @Override
     public void onInit() {
     }
 

@@ -18,6 +18,11 @@ public class RecyclerViewBindingActivity extends TBindingActivity<ActivityRecycl
     }
 
     @Override
+    protected Object getData() {
+        return null;
+    }
+
+    @Override
     public void onInit() {
 
     }

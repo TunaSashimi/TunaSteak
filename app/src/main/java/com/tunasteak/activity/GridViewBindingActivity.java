@@ -18,6 +18,11 @@ public class GridViewBindingActivity extends TBindingActivity<ActivityGridViewBi
     }
 
     @Override
+    protected Object getData() {
+        return null;
+    }
+
+    @Override
     public void onInit() {
 
     }

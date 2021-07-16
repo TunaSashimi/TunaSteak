@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tunasteak.BR;
-import com.tunasteak.data.TBindingData;
+import com.tunasteak.data.TBindingChoose;
 import com.tunasteak.listener.OnBarListener;
 import com.tunasteak.listener.OnInitListener;
 import com.tunasteak.listener.OnLoadListener;
@@ -45,7 +45,7 @@ public abstract class TBindingFragment<B extends ViewDataBinding> extends Fragme
                 binding.setVariable(BR.model, tBindingModel);
                 binding.setVariable(BR.onBarListener, this);
                 binding.setVariable(BR.model, tBindingModel);
-                binding.setVariable(BR.data, TBindingData.getInstance());
+//                binding.setVariable(BR.choose, TBindingChoose.getInstance());
                 binding.setVariable(BR.onClickListener, this);
                 //
                 binding.executePendingBindings();
@@ -114,5 +114,4 @@ public abstract class TBindingFragment<B extends ViewDataBinding> extends Fragme
             super.setUserVisibleHint(isVisibleToUser);
         }
     }
-
 }

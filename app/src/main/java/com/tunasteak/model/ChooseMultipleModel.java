@@ -6,7 +6,8 @@ import android.widget.Toast;
 import com.tunasteak.activity.ChooseMultipleBindingActivity;
 import com.tunasteak.adapter.TBindingAdapter;
 import com.tunasteak.bean.ChooseBean;
-import com.tunasteak.data.TBindingData;
+import com.tunasteak.data.BindingData;
+import com.tunasteak.data.TBindingChoose;
 import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityChooseMultipleBinding;
 import com.tunasteak.demo.databinding.ActivityChooseMultipleItemBinding;
@@ -69,13 +70,13 @@ public class ChooseMultipleModel extends TBindingModel<ActivityChooseMultipleBin
     }
 
     public void chooseAll() {
-        TBindingData tBindingData = TBindingData.getInstance();
-        tBindingData.setChooseIndex(-1);
-        if (tBindingData.getChooseAll().get()) {
-            tBindingData.setChooseAll(false);
+        TBindingChoose tBindingChoose = TBindingChoose.getInstance();
+        tBindingChoose.setChooseIndex(-1);
+        if (tBindingChoose.getChooseAll().get()) {
+            tBindingChoose.setChooseAll(false);
             //do something
         } else {
-            tBindingData.setChooseAll(true);
+            tBindingChoose.setChooseAll(true);
             //do something
         }
     }

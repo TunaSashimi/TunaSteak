@@ -17,6 +17,14 @@
 
         <!--Preparation for TBindingAdapter,TBindingExpand,TBindingModel,TBindingActivity not to report errors-->
         <variable
+            name="model"
+            type="com.tunasteak.model.TBindingModel" />
+
+        <variable
+            name="data"
+            type="Object" />
+
+        <variable
             name="size"
             type="int" />
 
@@ -26,19 +34,16 @@
 
         <variable
             name="expanded"
-            type="Boolean" />
+            type="boolean" />
 
         <variable
             name="bean"
-            type="java.lang.Object" />
+            type="Object" />
 
         <variable
-            name="data"
-            type="com.tunasteak.data.TBindingData" />
+            name="choose"
+            type="com.tunasteak.data.TBindingChoose" />
 
-        <variable
-            name="model"
-            type="com.tunasteak.model.TBindingModel" />
         <!--Preparation for TBindingAdapter,TBindingExpand,TBindingModel,TBindingActivity not to report errors-->
 
     </data>

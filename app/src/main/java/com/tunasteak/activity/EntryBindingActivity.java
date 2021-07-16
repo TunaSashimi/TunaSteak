@@ -36,6 +36,11 @@ public class EntryBindingActivity extends TBindingActivity<ActivityEntryBinding>
     }
 
     @Override
+    protected Object getData() {
+        return null;
+    }
+
+    @Override
     public void onInit() {
         List<String> stringList = new ArrayList();
         for (int i = 0; i < cla.length; i++) {

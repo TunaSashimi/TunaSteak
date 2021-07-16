@@ -5,7 +5,7 @@
 
         <variable
             name="data"
-            type="com.tunasteak.data.TBindingData" />
+            type="com.tunasteak.data.BindingData" />
 
         <variable
             name="model"

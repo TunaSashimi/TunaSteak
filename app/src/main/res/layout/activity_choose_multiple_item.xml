@@ -10,8 +10,8 @@
             type="com.tunasushi.view.TView.OnClickListener" />
 
         <variable
-            name="data"
-            type="com.tunasteak.data.TBindingData" />
+            name="choose"
+            type="com.tunasteak.data.TBindingChoose" />
 
         <variable
             name="bean"
@@ -40,7 +40,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:onClick="@{onClickListener::onClick}"
-            app:select="@{data.chooseAll}"
+            app:select="@{choose.chooseAll}"
             app:srcNormal="@drawable/bitmap_tview_check1"
             app:srcSelect="@drawable/bitmap_tview_check2" />
     </RelativeLayout>

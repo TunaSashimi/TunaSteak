@@ -4,11 +4,12 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
+
 import com.tunasteak.activity.ExpandableListViewBindingActivity;
 import com.tunasteak.adapter.TBindingExpandableListAdapter;
 import com.tunasteak.bean.HeroBean;
 import com.tunasteak.bean.ProfessionBean;
-import com.tunasteak.data.TBindingData;
+import com.tunasteak.data.BindingData;
 import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityExpandableListViewBinding;
 import com.tunasteak.demo.databinding.ActivityExpandableListViewItem01Binding;
@@ -16,8 +17,10 @@ import com.tunasteak.listener.OnChildCountListener;
 import com.tunasteak.listener.OnChildListener;
 import com.tunasteak.listener.OnItemChildClickListener;
 import com.tunasteak.listener.OnItemClickListener;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import androidx.databinding.BindingAdapter;
 import androidx.databinding.ViewDataBinding;
 
@@ -39,26 +42,6 @@ public class ExpandableListViewModel extends TBindingModel<ActivityExpandableLis
 
     @Override
     public void onItemClick(View v, int position, ActivityExpandableListViewItem01Binding binding) {
-//        switch (v.getId()) {
-//            case R.id.tvName:
-//                Toast.makeText(activity, "text_name==>position==>" + position, Toast.LENGTH_SHORT).show();
-//                personBeanList.get(position).age = 0;
-//                break;
-//            case R.id.tViewAge:
-//                Toast.makeText(activity, "text_age==>position==>" + position, Toast.LENGTH_SHORT).show();
-//                for (int i = 0; i < personBeanList.size(); i++) {
-//                    PersonBean person = personBeanList.get(i);
-//                    if (i == position) {
-//                        person.marry = !person.marry;
-//                    } else {
-//                        person.marry = false;
-//                    }
-//                }
-//                bindingAdapter.notifyDataSetChanged();
-//                break;
-//            default:
-//                break;
-//        }
     }
 
     protected void initData(Intent intent) {
@@ -97,7 +80,7 @@ public class ExpandableListViewModel extends TBindingModel<ActivityExpandableLis
         }
 
         //
-        TBindingData.getInstance().setPrefessionBeanList(professionBeanList);
+        BindingData.getInstance().setPrefessionBeanList(professionBeanList);
     }
 
     //
