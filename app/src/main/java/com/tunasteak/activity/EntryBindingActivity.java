@@ -21,8 +21,6 @@ public class EntryBindingActivity extends TBindingActivity<ActivityEntryBinding>
             ExpandableListViewBindingActivity.class,
             GridViewBindingActivity.class,
             RecyclerViewBindingActivity.class,
-
-            TLoadBindingActivity.class,
     };
 
     @Override

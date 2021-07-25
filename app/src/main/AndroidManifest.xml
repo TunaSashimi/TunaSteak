@@ -22,6 +22,5 @@
         <activity android:name="com.tunasteak.activity.GridViewBindingActivity" />
         <activity android:name="com.tunasteak.activity.RecyclerViewBindingActivity" />
 
-        <activity android:name="com.tunasteak.activity.TLoadBindingActivity" />
     </application>
 </manifest>
