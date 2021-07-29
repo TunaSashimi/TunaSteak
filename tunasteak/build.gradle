@@ -8,8 +8,6 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -31,6 +29,6 @@ android {
 }
 
 dependencies {
-    api 'com.github.TunaSashimi:TunaSushi:1.0.02'
+    api 'com.github.TunaSashimi:TunaSushi:1.0.04'
     api 'androidx.recyclerview:recyclerview:1.0.0'
 }
