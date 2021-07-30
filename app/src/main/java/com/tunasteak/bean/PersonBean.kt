@@ -1,5 +1,4 @@
-package com.tunasteak.bean;
-
+package com.tunasteak.bean
 
 /**
  * @author Tunasashimi
@@ -7,14 +6,4 @@ package com.tunasteak.bean;
  * @Copyright 2019 TunaSashimi. All rights reserved.
  * @Description
  */
-public class PersonBean {
-    public String name;
-    public int age;
-    public boolean marry;
-
-    public PersonBean(String name, int age, boolean marry) {
-        this.name = name;
-        this.age = age;
-        this.marry = marry;
-    }
-}
+class PersonBean(var name: String, var age: Int, var marry: Boolean)

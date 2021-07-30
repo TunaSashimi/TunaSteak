@@ -72,10 +72,10 @@ public class ExpandableListViewModel extends TBindingModel<ActivityExpandableLis
         //
         for (int i = 0; i < professionArray.length; i++) {
             ProfessionBean professionBean = professionBeanList.get(i);
-            professionBean.name = professionArray[i];
+            professionBean.setName(professionArray[i]);
             for (int j = 0; j < hreoArray[i].length; j++) {
                 HeroBean heroBean = new HeroBean(hreoArray[i][j]);
-                professionBean.heroBeanList.add(heroBean);
+                professionBean.getHeroBeanList().add(heroBean);
             }
         }
 
@@ -93,13 +93,13 @@ public class ExpandableListViewModel extends TBindingModel<ActivityExpandableLis
                     new OnChildCountListener() {
                         @Override
                         public int getChildCount(int groupPosition) {
-                            return professionBeanList.get(groupPosition).heroBeanList.size();
+                            return professionBeanList.get(groupPosition).getHeroBeanList().size();
                         }
                     },
                     new OnChildListener() {
                         @Override
                         public Object getChild(int groupPosition, int childPosition) {
-                            return professionBeanList.get(groupPosition).heroBeanList.get(childPosition);
+                            return professionBeanList.get(groupPosition).getHeroBeanList().get(childPosition);
                         }
                     },
                     new OnItemClickListener() {

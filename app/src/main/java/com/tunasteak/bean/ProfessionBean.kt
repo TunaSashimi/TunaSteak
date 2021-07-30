@@ -1,7 +1,6 @@
-package com.tunasteak.bean;
+package com.tunasteak.bean
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.ArrayList
 
 /**
  * @author TunaSashimi
@@ -9,7 +8,7 @@ import java.util.List;
  * @Copyright 2021 TunaSashimi. All rights reserved.
  * @Description
  */
-public class ProfessionBean {
-    public String name;
-    public List<HeroBean> heroBeanList=new ArrayList();
+class ProfessionBean {
+    var name: String? = null
+    var heroBeanList: List<HeroBean?> = ArrayList()
 }

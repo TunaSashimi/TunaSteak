@@ -3,6 +3,7 @@ package com.tunasteak.model;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
+
 import com.tunasteak.activity.GridViewBindingActivity;
 import com.tunasteak.adapter.TBindingAdapter;
 import com.tunasteak.bean.PersonBean;
@@ -10,6 +11,7 @@ import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityGridViewBinding;
 import com.tunasteak.demo.databinding.ActivityGridViewItemBinding;
 import com.tunasteak.listener.OnItemClickListener;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,10 +65,10 @@ public class GridViewModel extends TBindingModel<ActivityGridViewBinding> implem
     public void change() {
         for (int i = 0; i < personBeanList.size(); i++) {
             PersonBean personBean = personBeanList.get(i);
-            if (personBean.age == 25) {
-                personBean.age = 26;
+            if (personBean.getAge() == 25) {
+                personBean.setAge(26);
             } else {
-                personBean.age = 25;
+                personBean.setAge(25);
             }
         }
         binding.setAdapter(tBindingAdapter);

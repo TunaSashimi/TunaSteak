@@ -1,8 +1,7 @@
-package com.tunasteak.bean;
+package com.tunasteak.bean
 
-
-import androidx.databinding.BaseObservable;
-import androidx.databinding.ObservableBoolean;
+import androidx.databinding.BaseObservable
+import androidx.databinding.ObservableBoolean
 
 /**
  * @author TunaSashimi
@@ -10,6 +9,7 @@ import androidx.databinding.ObservableBoolean;
  * @Copyright 2020 TunaSashimi. All rights reserved.
  * @Description
  */
-public class SelectBean extends BaseObservable {
-    public ObservableBoolean select = new ObservableBoolean();
+class SelectBean : BaseObservable() {
+    @JvmField
+    var select = ObservableBoolean()
 }

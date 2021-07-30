@@ -43,10 +43,8 @@ public abstract class TBindingFragment<B extends ViewDataBinding> extends Fragme
                 binding = DataBindingUtil.inflate(inflater, layoutId, container, false);
                 contentView = binding.getRoot();
                 //
-                TBindingModel tBindingModel = getModel();
-                binding.setVariable(BR.model, tBindingModel);
-                Object data = getData();
-                binding.setVariable(BR.data, data);
+                binding.setVariable(BR.model, getModel());
+                binding.setVariable(BR.data, getData());
                 //
                 binding.setVariable(BR.onBarListener, this);
                 binding.setVariable(BR.onClickListener, this);

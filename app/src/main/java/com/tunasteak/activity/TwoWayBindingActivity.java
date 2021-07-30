@@ -31,7 +31,7 @@ public class TwoWayBindingActivity extends TBindingActivity<ActivityTwoWayBindin
     @Override
     public void onInit() {
         SelectBean selectBean = new SelectBean();
-        binding.setSelect(selectBean);
+        binding.setBean(selectBean);
         selectBean.select.set(true);
     }
 

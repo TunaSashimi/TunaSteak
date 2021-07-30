@@ -5,7 +5,7 @@
     <data>
 
         <variable
-            name="select"
+            name="bean"
             type="com.tunasteak.bean.SelectBean" />
     </data>
 
@@ -19,7 +19,7 @@
             android:layout_height="120dp"
             app:backgroundNormal="#ffff00"
             app:backgroundSelect="#0000ff"
-            app:select="@{select.select}" />
+            app:select="@{bean.select}" />
 
         <com.tunasushi.view.TView
             android:id="@+id/tView02"
@@ -29,14 +29,14 @@
             android:layout_marginTop="16dp"
             app:backgroundNormal="#ffff00"
             app:backgroundSelect="#0000ff"
-            app:select="@={select.select}" />
+            app:select="@={bean.select}" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tView02"
             android:layout_marginTop="16dp"
-            android:text="@{String.valueOf(select.select)}"
+            android:text="@{String.valueOf(bean.select)}"
             android:textSize="50dp" />
     </RelativeLayout>
 </layout>

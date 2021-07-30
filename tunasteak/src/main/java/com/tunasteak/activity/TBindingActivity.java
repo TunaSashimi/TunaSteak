@@ -52,10 +52,8 @@ public abstract class TBindingActivity<B extends ViewDataBinding> extends Activi
             if (binding != null) {
                 contentView = binding.getRoot();
                 //
-                TBindingModel tBindingModel = getModel();
-                binding.setVariable(BR.model, tBindingModel);
-                Object data = getData();
-                binding.setVariable(BR.data, data);
+                binding.setVariable(BR.model, getModel());
+                binding.setVariable(BR.data, getData());
                 //
                 binding.setVariable(BR.onBarListener, this);
                 binding.setVariable(BR.onClickListener, this);
