@@ -1,5 +1,4 @@
-package com.tunasteak.listener;
-
+package com.tunasteak.listener
 
 /**
  * @author Tunasashimi
@@ -7,6 +6,6 @@ package com.tunasteak.listener;
  * @Copyright 2020 TunaSashimi. All rights reserved.
  * @Description
  */
-public interface OnLoadListener {
-    void onLoad();
+interface OnLoadListener {
+    fun onLoad()
 }

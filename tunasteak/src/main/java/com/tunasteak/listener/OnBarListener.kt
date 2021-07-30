@@ -1,6 +1,6 @@
-package com.tunasteak.listener;
+package com.tunasteak.listener
 
-import android.graphics.drawable.Drawable;
+import android.graphics.drawable.Drawable
 
 /**
  * @author Tunasashimi
@@ -8,14 +8,10 @@ import android.graphics.drawable.Drawable;
  * @Copyright 2020 TunaSashimi. All rights reserved.
  * @Description
  */
-public interface OnBarListener {
-    Drawable getDrawableLeft();
-
-    Drawable getDrawableRight();
-
-    String getTextLeft();
-
-    String getTextRight();
-
-    String getTextCenter();
+interface OnBarListener {
+    val drawableLeft: Drawable?
+    val drawableRight: Drawable?
+    val textLeft: String?
+    val textRight: String?
+    val textCenter: String?
 }

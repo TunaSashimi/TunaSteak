@@ -1,8 +1,7 @@
-package com.tunasteak.listener;
+package com.tunasteak.listener
 
-import android.view.View;
-
-import androidx.databinding.ViewDataBinding;
+import android.view.View
+import androidx.databinding.ViewDataBinding
 
 /**
  * @author Tunasashimi
@@ -10,6 +9,6 @@ import androidx.databinding.ViewDataBinding;
  * @Copyright 2020 TunaSashimi. All rights reserved.
  * @Description
  */
-public interface OnItemClickListener<B extends ViewDataBinding> {
-    void onItemClick(View v, int position, B binding);
+interface OnItemClickListener<B : ViewDataBinding?> {
+    fun onItemClick(v: View?, position: Int, binding: B)
 }

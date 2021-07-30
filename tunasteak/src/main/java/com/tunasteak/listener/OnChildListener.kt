@@ -1,4 +1,4 @@
-package com.tunasteak.listener;
+package com.tunasteak.listener
 
 /**
  * @author Tunasashimi
@@ -6,6 +6,6 @@ package com.tunasteak.listener;
  * @Copyright 2020 TunaSashimi. All rights reserved.
  * @Description
  */
-public interface OnChildListener {
-    Object getChild(int groupPosition, int childPosition);
+interface OnChildListener {
+    fun getChild(groupPosition: Int, childPosition: Int): Any?
 }
