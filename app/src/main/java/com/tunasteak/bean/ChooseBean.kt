@@ -1,4 +1,4 @@
-package com.tunasteak.bean;
+package com.tunasteak.bean
 
 /**
  * @author TunaSashimi
@@ -6,9 +6,4 @@ package com.tunasteak.bean;
  * @Copyright 2020 TunaSashimi. All rights reserved.
  * @Description
  */
-public class ChooseBean {
-    public String name;
-    public ChooseBean(String name) {
-        this.name = name;
-    }
-}
+class ChooseBean(var name: String)
