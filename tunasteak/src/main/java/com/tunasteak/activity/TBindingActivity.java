@@ -36,7 +36,7 @@ public abstract class TBindingActivity<B extends ViewDataBinding> extends Activi
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        System.out.println("1.0.04");
+        System.out.println("1.0.05");
 
         //Data related
         onBinding();
