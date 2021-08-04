@@ -6,6 +6,7 @@ import com.tunasteak.data.Data;
 import com.tunasteak.demo.R;
 import com.tunasteak.demo.databinding.ActivityDataShowBinding;
 import com.tunasteak.model.TBindingModel;
+import com.tunasteak.model.DataShowModel;
 
 /**
  * @author TunaSashimi
@@ -21,7 +22,7 @@ public class DataShowBindingActivity extends TBindingActivity<ActivityDataShowBi
 
     @Override
     protected TBindingModel getModel() {
-        return null;
+        return new DataShowModel(binding, getIntent());
     }
 
     @Override
@@ -45,6 +46,12 @@ public class DataShowBindingActivity extends TBindingActivity<ActivityDataShowBi
                 } else {
                     bindingData.setDataSelect(true);
                 }
+                break;
+            case R.id.buttonShowLoading:
+                getModel().showLoading();
+                break;
+            case R.id.buttonDismissLoading:
+                getModel().dismissLoading();
                 break;
             default:
                 break;

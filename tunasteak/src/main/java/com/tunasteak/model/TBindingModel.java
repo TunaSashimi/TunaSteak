@@ -19,9 +19,9 @@ public class TBindingModel<B extends ViewDataBinding> {
     protected Context context;
 
     //
-    private TLoad tLoad;
-    private FrameLayout frameLayout;
-    private FrameLayout.LayoutParams frameLayoutParams;
+    private static TLoad tLoad;
+    private static FrameLayout frameLayout;
+    private static FrameLayout.LayoutParams frameLayoutParams;
 
     public TBindingModel(B binding) {
         if (binding != null) {

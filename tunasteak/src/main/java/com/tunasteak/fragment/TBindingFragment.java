@@ -109,7 +109,6 @@ public abstract class TBindingFragment<B extends ViewDataBinding> extends Fragme
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         if (isVisible() && isVisibleToUser && contentView != null) {
-            //懒加载机制,在fragment可见时再去加载数据
             onLoad();
         } else {
             super.setUserVisibleHint(isVisibleToUser);

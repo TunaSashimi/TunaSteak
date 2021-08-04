@@ -84,6 +84,23 @@
             app:text="100"
             app:textColorNormal="#ffffff"
             app:textSize="16dp" />
+
+        <Button
+            android:id="@+id/buttonShowLoading"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tViewSrcLeftPadding"
+            android:onClick="onClick"
+            android:text="SHOW LOADING" />
+
+        <Button
+            android:id="@+id/buttonDismissLoading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonShowLoading"
+            android:onClick="onClick"
+            android:text="DISMISS LOADING" />
     </RelativeLayout>
 </layout>
 
