@@ -1,70 +1,67 @@
-package com.tunasteak.activity;
+package com.tunasteak.activity
 
-import android.content.Intent;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import com.tunasteak.demo.R;
-import com.tunasteak.demo.databinding.ActivityEntryBinding;
-import com.tunasteak.model.TBindingModel;
-import java.util.ArrayList;
-import java.util.List;
+import com.tunasteak.demo.R
+import com.tunasteak.model.TBindingModel
+import android.widget.ArrayAdapter
+import android.widget.AdapterView
+import android.content.Intent
+import android.view.View
+import android.widget.ListView
+import com.tunasteak.demo.databinding.ActivityEntryBinding
+import java.util.ArrayList
 
-public class EntryBindingActivity extends TBindingActivity<ActivityEntryBinding> {
-    private Class<?>[] cla = {
-            DataShowBindingActivity.class,
-            TwoWayBindingActivity.class,
+class EntryBindingActivity : TBindingActivity<ActivityEntryBinding?>() {
+    private val cla = arrayOf<Class<*>>(
+        DataShowBindingActivity::class.java,
+        TwoWayBindingActivity::class.java,
+        ChooseSingleBindingActivity::class.java,
+        ChooseMultipleBindingActivity::class.java,
+        ExpandableListViewBindingActivity::class.java,
+        GridViewBindingActivity::class.java,
+        RecyclerViewBindingActivity::class.java
+    )
 
-            ChooseSingleBindingActivity.class,
-            ChooseMultipleBindingActivity.class,
-            ExpandableListViewBindingActivity.class,
-            GridViewBindingActivity.class,
-            RecyclerViewBindingActivity.class,
-
-    };
-
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_entry;
+    override fun getLayoutId(): Int {
+        return R.layout.activity_entry
     }
 
-    @Override
-    protected TBindingModel getModel() {
-        return null;
+    override fun getModel(): TBindingModel<*>? {
+        return null
     }
 
-    @Override
-    protected Object getData() {
-        return null;
+    override fun getData(): Any? {
+        return null
     }
 
-    @Override
-    public void onInit() {
-        List<String> stringList = new ArrayList();
-        for (int i = 0; i < cla.length; i++) {
-            stringList.add(cla[i].getSimpleName());
+    override fun onInit() {
+        val stringList: MutableList<String?> = ArrayList()
+        for (i in cla.indices) {
+            stringList.add(cla[i].simpleName)
         }
 
         //
-        ListView listView = findViewById(R.id.listView);
-        listView.setAdapter(new ArrayAdapter(this, R.layout.activity_entry_item, stringList));
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-                startActivity(new Intent(EntryBindingActivity.this, cla[arg2]));
+        val listView = findViewById<ListView>(R.id.listView)
+        listView.adapter = ArrayAdapter(this, R.layout.activity_entry_item, stringList)
+        listView.onItemClickListener = AdapterView.OnItemClickListener { arg0, arg1, arg2, arg3 ->
+            startActivity(
+                Intent(
+                    this@EntryBindingActivity,
+                    cla[arg2]
+                )
+            )
+        }
+        binding!!.listView.adapter =
+            ArrayAdapter(this, R.layout.activity_entry_item, stringList)
+        binding!!.listView.onItemClickListener =
+            AdapterView.OnItemClickListener { arg0, arg1, arg2, arg3 ->
+                startActivity(
+                    Intent(
+                        this@EntryBindingActivity,
+                        cla[arg2]
+                    )
+                )
             }
-        });
-
-        binding.listView.setAdapter(new ArrayAdapter(this, R.layout.activity_entry_item, stringList));
-        binding.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-                startActivity(new Intent(EntryBindingActivity.this, cla[arg2]));
-            }
-        });
     }
 
-    @Override
-    public void onClick(View v) {
-
-    }
+    override fun onClick(v: View) {}
 }

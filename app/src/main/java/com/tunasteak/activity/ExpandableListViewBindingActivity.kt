@@ -1,40 +1,30 @@
-package com.tunasteak.activity;
+package com.tunasteak.activity
 
-import android.view.View;
+import android.view.View
+import com.tunasteak.data.Data
+import com.tunasteak.demo.R
+import com.tunasteak.demo.databinding.ActivityExpandableListViewBinding
+import com.tunasteak.model.TBindingModel
+import com.tunasteak.model.ExpandableListViewModel
 
-import com.tunasteak.data.Data;
-import com.tunasteak.demo.R;
-import com.tunasteak.demo.databinding.ActivityExpandableListViewBinding;
-import com.tunasteak.model.ExpandableListViewModel;
-import com.tunasteak.model.TBindingModel;
-
-public class ExpandableListViewBindingActivity extends TBindingActivity<ActivityExpandableListViewBinding> {
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_expandable_list_view;
+class ExpandableListViewBindingActivity : TBindingActivity<ActivityExpandableListViewBinding?>() {
+    override fun getLayoutId(): Int {
+        return R.layout.activity_expandable_list_view
     }
 
-    @Override
-    protected TBindingModel getModel() {
-        return new ExpandableListViewModel(binding, getIntent());
+    override fun getModel(): TBindingModel<*> {
+        return ExpandableListViewModel(binding, intent)
     }
 
-    @Override
-    protected Object getData() {
-        return Data.getInstance();
+    override fun getData(): Any {
+        return Data.getInstance()
     }
 
-    @Override
-    public void onInit() {
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            default:
-                break;
+    override fun onInit() {}
+    override fun onClick(v: View) {
+        when (v.id) {
+            else -> {
+            }
         }
     }
 }
-
-

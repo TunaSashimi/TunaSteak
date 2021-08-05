@@ -1,10 +1,11 @@
-package com.tunasteak.activity;
+package com.tunasteak.activity
 
-import android.view.View;
-import com.tunasteak.bean.SelectBean;
-import com.tunasteak.demo.R;
-import com.tunasteak.demo.databinding.ActivityTwoWayBindingBinding;
-import com.tunasteak.model.TBindingModel;
+import android.view.View
+import com.tunasteak.activity.TBindingActivity
+import com.tunasteak.demo.R
+import com.tunasteak.model.TBindingModel
+import com.tunasteak.bean.SelectBean
+import com.tunasteak.demo.databinding.ActivityTwoWayBindingBinding
 
 /**
  * @author TunaSashimi
@@ -12,31 +13,24 @@ import com.tunasteak.model.TBindingModel;
  * @Copyright 2020 TunaSashimi. All rights reserved.
  * @Description
  */
-public class TwoWayBindingActivity extends TBindingActivity<ActivityTwoWayBindingBinding> {
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_two_way_binding;
+class TwoWayBindingActivity : TBindingActivity<ActivityTwoWayBindingBinding?>() {
+    override fun getLayoutId(): Int {
+        return R.layout.activity_two_way_binding
     }
 
-    @Override
-    protected TBindingModel getModel() {
-        return null;
+    override fun getModel(): TBindingModel<*>? {
+        return null
     }
 
-    @Override
-    protected Object getData() {
-        return null;
+    override fun getData(): Any? {
+        return null
     }
 
-    @Override
-    public void onInit() {
-        SelectBean selectBean = new SelectBean();
-        binding.setBean(selectBean);
-        selectBean.select.set(true);
+    override fun onInit() {
+        val selectBean = SelectBean()
+        binding!!.bean = selectBean
+        selectBean.select.set(true)
     }
 
-    @Override
-    public void onClick(View v) {
-
-    }
+    override fun onClick(v: View) {}
 }

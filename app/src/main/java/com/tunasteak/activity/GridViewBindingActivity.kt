@@ -1,35 +1,25 @@
-package com.tunasteak.activity;
+package com.tunasteak.activity
 
-import android.view.View;
-import com.tunasteak.demo.R;
-import com.tunasteak.demo.databinding.ActivityGridViewBinding;
-import com.tunasteak.model.GridViewModel;
-import com.tunasteak.model.TBindingModel;
+import android.view.View
+import com.tunasteak.activity.TBindingActivity
+import com.tunasteak.demo.R
+import com.tunasteak.demo.databinding.ActivityGridViewBinding
+import com.tunasteak.model.TBindingModel
+import com.tunasteak.model.GridViewModel
 
-public class GridViewBindingActivity extends TBindingActivity<ActivityGridViewBinding> {
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_grid_view;
+class GridViewBindingActivity : TBindingActivity<ActivityGridViewBinding?>() {
+    override fun getLayoutId(): Int {
+        return R.layout.activity_grid_view
     }
 
-    @Override
-    protected TBindingModel getModel() {
-        return new GridViewModel(binding, getIntent());
+    override fun getModel(): TBindingModel<*> {
+        return GridViewModel(binding, intent)
     }
 
-    @Override
-    protected Object getData() {
-        return null;
+    override fun getData(): Any? {
+        return null
     }
 
-    @Override
-    public void onInit() {
-
-    }
-
-    @Override
-    public void onClick(View v) {
-    }
+    override fun onInit() {}
+    override fun onClick(v: View) {}
 }
-
-

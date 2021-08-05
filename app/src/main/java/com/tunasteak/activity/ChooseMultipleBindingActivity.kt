@@ -1,35 +1,24 @@
-package com.tunasteak.activity;
+package com.tunasteak.activity
 
-import android.view.View;
-import com.tunasteak.demo.R;
-import com.tunasteak.demo.databinding.ActivityChooseMultipleBinding;
-import com.tunasteak.model.ChooseMultipleModel;
-import com.tunasteak.model.TBindingModel;
+import android.view.View
+import com.tunasteak.demo.R
+import com.tunasteak.demo.databinding.ActivityChooseMultipleBinding
+import com.tunasteak.model.TBindingModel
+import com.tunasteak.model.ChooseMultipleModel
 
-public class ChooseMultipleBindingActivity extends TBindingActivity<ActivityChooseMultipleBinding> {
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_choose_multiple;
+class ChooseMultipleBindingActivity : TBindingActivity<ActivityChooseMultipleBinding?>() {
+    override fun getLayoutId(): Int {
+        return R.layout.activity_choose_multiple
     }
 
-    @Override
-    protected TBindingModel getModel() {
-        return new ChooseMultipleModel(binding, getIntent());
+    override fun getModel(): TBindingModel<*> {
+        return ChooseMultipleModel(binding, intent)
     }
 
-    @Override
-    protected Object getData() {
-        return null;
+    override fun getData(): Any? {
+        return null
     }
 
-    @Override
-    public void onInit() {
-
-    }
-
-    @Override
-    public void onClick(View v) {
-    }
+    override fun onInit() {}
+    override fun onClick(v: View) {}
 }
-
-

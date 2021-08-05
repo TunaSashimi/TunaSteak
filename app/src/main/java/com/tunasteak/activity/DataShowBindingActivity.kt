@@ -1,12 +1,11 @@
-package com.tunasteak.activity;
+package com.tunasteak.activity
 
-import android.view.View;
-
-import com.tunasteak.data.Data;
-import com.tunasteak.demo.R;
-import com.tunasteak.demo.databinding.ActivityDataShowBinding;
-import com.tunasteak.model.TBindingModel;
-import com.tunasteak.model.DataShowModel;
+import android.view.View
+import com.tunasteak.data.Data
+import com.tunasteak.demo.R
+import com.tunasteak.demo.databinding.ActivityDataShowBinding
+import com.tunasteak.model.TBindingModel
+import com.tunasteak.model.DataShowModel
 
 /**
  * @author TunaSashimi
@@ -14,47 +13,35 @@ import com.tunasteak.model.DataShowModel;
  * @Copyright 2020 TunaSashimi. All rights reserved.
  * @Description
  */
-public class DataShowBindingActivity extends TBindingActivity<ActivityDataShowBinding> {
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_data_show;
+class DataShowBindingActivity : TBindingActivity<ActivityDataShowBinding?>() {
+    override fun getLayoutId(): Int {
+        return R.layout.activity_data_show
     }
 
-    @Override
-    protected TBindingModel getModel() {
-        return new DataShowModel(binding, getIntent());
+    override fun getModel(): TBindingModel<*> {
+        return DataShowModel(binding, intent)
     }
 
-    @Override
-    protected Object getData() {
-        return Data.getInstance();
+    override fun getData(): Any {
+        return Data.getInstance()
     }
 
-    @Override
-    public void onInit() {
-
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.button:
-                Data bindingData = Data.getInstance();
-                bindingData.setDataShow("DATA SHOW");
-                if (bindingData.getDataSelect().get()) {
-                    bindingData.setDataSelect(false);
+    override fun onInit() {}
+    override fun onClick(v: View) {
+        when (v.id) {
+            R.id.button -> {
+                val bindingData = Data.getInstance()
+                bindingData.setDataShow("DATA SHOW")
+                if (bindingData.dataSelect.get()) {
+                    bindingData.setDataSelect(false)
                 } else {
-                    bindingData.setDataSelect(true);
+                    bindingData.setDataSelect(true)
                 }
-                break;
-            case R.id.buttonShowLoading:
-                getModel().showLoading();
-                break;
-            case R.id.buttonDismissLoading:
-                getModel().dismissLoading();
-                break;
-            default:
-                break;
+            }
+            R.id.buttonShowLoading -> model.showLoading()
+            R.id.buttonDismissLoading -> model.dismissLoading()
+            else -> {
+            }
         }
     }
 }
